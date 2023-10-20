@@ -4,100 +4,133 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon-32x32.png" />
+    <title>Room Homepage</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png" />
 
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/src/css/dist/site.min.css" />
     <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/src/js/dist/concat.min.js" defer></script>
   </head>
-  <body class="relative min-h-screen transition-all overflow-x-hidden">
-    <div class="overlay absolute top-0 right-0 bottom-0 left-0 w-full h-full opacity-0"></div>
-    <header class="header relative pt-7 md:pt-[90px]">
-      <div class="container">
-        <div class="flex justify-between items-center">
-          <a class="header-logo" href="/"><img src="./assets/images/logo.svg" alt="W Logo" width="64" height="40" /></a>
-          <nav class="header-nav absolute right-[-100%] md:static top-0 right-0 py-36 px-6 md:p-0 w-[255px] md:w-auto h-screen md:h-auto ease-in-out duration-300 z-40 overflow-y-auto">
-            <ul>
-              <li class="block md:inline-block"><a class="text-lg md:text-[15px] leading-6 md:leading-[26px] transition-all" href="/" title="Home">Home</a></li>
-              <li class="block md:inline-block mt-6 md:mt-0 md:ml-10"><a class="text-lg md:text-[15px] leading-6 md:leading-[26px] transition-all" href="#" title="New">New</a></li>
-              <li class="block md:inline-block mt-6 md:mt-0 md:ml-10"><a class="text-lg md:text-[15px] leading-6 md:leading-[26px] transition-all" href="#" title="Popular">Popular</a></li>
-              <li class="block md:inline-block mt-6 md:mt-0 md:ml-10"><a class="text-lg md:text-[15px] leading-6 md:leading-[26px] transition-all" href="#" title="Trending">Trending</a></li>
-              <li class="block md:inline-block mt-6 md:mt-0 md:ml-10"><a class="text-lg md:text-[15px] leading-6 md:leading-[26px] transition-all" href="#" title="Categories">Categories</a></li>
-            </ul>
-          </nav>
-          <button class="hamburger hamburger--spin z-50" type="button">
+  <body class="home relative min-h-screen xl:flex xl:items-center">
+    <div class="container">
+      <section class="home-hero relative">
+        <header class="header flex justify-center items-center absolute top-0 right-0 left-0 py-12 px-6 h-[110px] transition z-10 md:top-16 md:left-8 md:justify-normal md:p-0 xl:left-[70px]">
+          <button class="hamburger hamburger--spin absolute left-[24px] md:!hidden" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
           </button>
-        </div>
-      </div>
-    </header>
-    <div class="content mt-8 md:mt-[60px] pb-[75px] xl:pb-[130px]">
-      <div class="container">
-        <div class="row md:flex gap-[30px]">
-          <main class="featured flex-1">
-            <picture>
-              <source srcset="./assets/images/image-web-3-mobile.jpg" media="(max-width: 375px)" />
-              <source srcset="./assets/images/image-web-3-desktop.jpg" />
-              <img src="./assets/images/image-web-3-desktop.jpg" alt="Featured Image" />
-            </picture>
-            <div class="row xl:flex mt-[30px] gap-[30px]">
-              <div class="col xl:flex-1">
-                <h1 class="text-[40px] xl:text-[56px] leading-10 xl:leading-[56px]">The Bright Future of Web 3.0?</h1>
+          <a class="header-logo" href="/"><img src="/assets/logos/logo.svg" alt="Room" /></a>
+          <nav class="navigation hidden ml-auto md:block md:ml-14">
+            <ul class="flex">
+              <li class="leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">home</a></li>
+              <li class="ml-[30px] leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">shop</a></li>
+              <li class="ml-[30px] leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">about</a></li>
+              <li class="ml-[30px] leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="row md:flex">
+          <div class="col col-left relative md:w-1/2">
+            <div class="swiper h-full transition">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide bg-cover bg-center md:bg-[url('/assets/images/desktop-image-hero-1.jpg')]">
+                  <img class="mobile md:hidden w-full" src="/assets/images/mobile-image-hero-1.jpg" alt="Image 1" />
+                </div>
+                <div class="swiper-slide bg-cover bg-center md:bg-[url('/assets/images/desktop-image-hero-2.jpg')]">
+                  <img class="mobile md:hidden w-full" src="/assets/images/mobile-image-hero-2.jpg" alt="Image 2" />
+                </div>
+                <div class="swiper-slide bg-cover bg-center md:bg-[url('/assets/images/desktop-image-hero-3.jpg')]">
+                  <img class="mobile md:hidden w-full" src="/assets/images/mobile-image-hero-3.jpg" alt="Image 3" />
+                </div>
               </div>
-              <div class="col xl:flex-1 mt-4 xl:m-0">
-                <p class="text-[15px] leading-[26px]">
-                  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
-                </p>
-                <a class="button inline-block mt-6 xl:mt-[30px] py-3 px-[30px] text-sm font-bold leading-6 tracking-[4px] uppercase transition-all" href="#" title="Read More">Read More</a>
+            </div>
+            <div class="swiper-buttons absolute right-0 bottom-0 flex z-10 xl:hidden">
+              <div class="button button-prev flex justify-center items-center w-14 h-14 bg-black transition">
+                <img class="w-2 h-4" src="/assets/icons/icon-angle-left.svg" alt="Button Prev" />
+              </div>
+              <div class="button button-next flex justify-center items-center w-14 h-14 bg-black transition">
+                <img class="w-2 h-4" src="/assets/icons/icon-angle-right.svg" alt="Button Next" />
               </div>
             </div>
-          </main>
-          <aside class="sidebar mt-16 md:m-0 py-6 px-5 md:py-8 md:px-6 md:w-[350px]">
-            <h2 class="text-[40px] leading-10">New</h2>
-            <div class="sidebar-item mt-[35px]">
-              <a class="transition-all" href="#"><h3 class="text-xl leading-6">Hydrogen VS Electric Cars</h3></a>
-              <p class="mt-2 text-[15px] leading-[26px]">Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </div>
+          <div class="col col-right relative md:w-1/2 xl:w-[600px]">
+            <div class="swiper pt-[60px] px-8 pb-[75px] xl:pt-[120px] xl:px-[100px] transition">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <h1 class="text-[40px] font-semibold leading-none tracking-[-1.5px] text-black xl:text-5xl xl:tracking-[-2px]">Discover innovative ways to decorate</h1>
+                  <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+                    We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in
+                    your own style with our collection and make your property a reflection of you and what you love.
+                  </p>
+                  <a class="button button-action flex items-center relative mt-10 md:mt-[26px] text-[15px] font-medium leading-4 tracking-[12.5px] uppercase text-black transition" href="#"
+                    >Shop Now</a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <h1 class="text-[40px] font-semibold leading-none tracking-[-1.5px] text-black xl:text-5xl xl:tracking-[-2px]">We are available all across the globe</h1>
+                  <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+                    With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch
+                    nearest you using our store locator. Any questions? Don't hesitate to contact us today.
+                  </p>
+                  <a class="button button-action flex items-center relative mt-10 md:mt-[26px] text-[15px] font-medium leading-4 tracking-[12.5px] uppercase text-black transition" href="">Shop Now</a>
+                </div>
+                <div class="swiper-slide">
+                  <h1 class="text-[40px] font-semibold leading-none tracking-[-1.5px] text-black xl:text-5xl xl:tracking-[-2px]">Manufactured with the best materials</h1>
+                  <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+                    Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as
+                    possible. With three decades of experience in this industry, we understand what customers want for their home and office.
+                  </p>
+                  <a class="button button-action flex items-center relative mt-10 md:mt-[26px] text-[15px] font-medium leading-4 tracking-[12.5px] uppercase text-black transition" href="">Shop Now</a>
+                </div>
+              </div>
             </div>
-            <div class="sidebar-item border-t mt-[30px] pt-[30px]">
-              <a class="transition-all" href="#"><h3 class="text-xl leading-6">The Downsides of AI Artistry</h3></a>
-              <p class="mt-2 text-[15px] leading-[26px]">What are the possible adverse effects of on-demand AI image generation?</p>
+            <div class="swiper-buttons hidden xl:flex">
+              <div class="button button-prev flex justify-center items-center w-20 h-20 bg-black transition">
+                <img class="w-3 h-6" src="/assets/icons/icon-angle-left.svg" alt="Button Prev" />
+              </div>
+              <div class="button button-next flex justify-center items-center w-20 h-20 bg-black transition">
+                <img class="w-3 h-6" src="/assets/icons/icon-angle-right.svg" alt="Button Next" />
+              </div>
             </div>
-            <div class="sidebar-item border-t mt-[30px] pt-[30px]">
-              <a class="transition-all" href="#"><h3 class="text-xl leading-6">Is VC Funding Drying Up?</h3></a>
-              <p class="mt-2 text-[15px] leading-[26px]">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-            </div>
-          </aside>
+          </div>
         </div>
-        <div class="row flex flex-wrap mt-[65px] xl:mt-[70px] md:mx-[-15px] xl:mx-0 gap-8 md:gap-0 xl:gap-[30px]">
-          <div class="item flex md:flex-[50%] xl:flex-1 md:px-[15px] xl:p-0">
-            <img class="self-start mr-6" src="./assets/images/image-retro-pcs.jpg" alt="Retro Computers" width="100" />
-            <div>
-              <h4 class="text-[32px] leading-6">01</h4>
-              <a class="block mt-3 text-lg leading-6 transition-all" href="#">Reviving Retro PCs</a>
-              <p class="mt-2 text-[15px] leading-[26px]">What happens when old PCs are given modern upgrades?</p>
-            </div>
+      </section>
+      <section class="home-about md:hidden xl:flex">
+        <div class="col col-left col-image xl:w-[420px]">
+          <img class="w-full" src="/assets/images/image-about-dark.jpg" alt="About" />
+        </div>
+        <div class="col col-middle col-content pt-[50px] px-8 pb-10 xl:flex-1 xl:pt-[70px] xl:px-12 xl:pb-[58px]">
+          <h3 class="text-sm font-bold leading-[22px] tracking-[6px] text-black uppercase">About our future</h3>
+          <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+            Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires
+            you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
+          </p>
+        </div>
+        <div class="col col-right col-image xl:w-[440px]">
+          <img class="w-full" src="/assets/images/image-about-light.jpg" alt="About" />
+        </div>
+      </section>
+      <section class="home-about home-about-tablet hidden md:block xl:hidden">
+        <div class="col col-middle col-content pt-[50px] px-8 pb-10">
+          <h3 class="text-sm font-bold leading-[22px] tracking-[6px] text-black uppercase">About our future</h3>
+          <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+            Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires
+            you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
+          </p>
+        </div>
+        <div class="row flex">
+          <div class="col col-left col-image flex-1">
+            <img class="w-full h-full object-cover" src="/assets/images/image-about-dark.jpg" alt="About" />
           </div>
-          <div class="item flex md:flex-[50%] xl:flex-1 md:m-0 md:px-[15px] xl:p-0">
-            <img class="self-start mr-6" src="./assets/images/image-top-laptops.jpg" alt="Retro Computers" width="100" />
-            <div>
-              <h4 class="text-[32px] leading-6">02</h4>
-              <a class="block mt-3 text-lg leading-6 transition-all" href="#">Top 10 Laptops of 2022</a>
-              <p class="mt-2 text-[15px] leading-[26px]">Our best picks for various needs and budgets.</p>
-            </div>
-          </div>
-          <div class="item flex md:flex-[50%] xl:flex-1 md:mt-8 xl:m-0 md:px-[15px] xl:p-0">
-            <img class="self-start mr-6" src="./assets/images/image-gaming-growth.jpg" alt="Retro Computers" width="100" />
-            <div>
-              <h4 class="text-[32px] leading-6">03</h4>
-              <a class="block mt-3 text-lg leading-6 transition-all" href="#">The Growth of Gaming</a>
-              <p class="mt-2 text-[15px] leading-[26px]">How the pandemic has sparked fresh opportunities.</p>
-            </div>
+          <div class="col col-right col-image flex-1">
+            <img class="w-full h-full object-cover" src="/assets/images/image-about-light.jpg" alt="About" />
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>

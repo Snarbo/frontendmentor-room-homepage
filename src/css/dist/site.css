@@ -1,26 +1,7 @@
-@font-face {
-  font-family: 'Inter-Regular';
-  src: url("/assets/fonts/static/Inter-Regular.ttf"); }
-
-@font-face {
-  font-family: 'Inter-Bold';
-  src: url("/assets/fonts/static/Inter-Bold.ttf"); }
-
-@font-face {
-  font-family: 'Inter-Extra-Bold';
-  src: url("/assets/fonts/static/Inter-ExtraBold.ttf"); }
-
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
-@use 'sass:math';
 .hamburger {
-  padding: 0 0;
+  padding: 0px 0px;
   display: inline-block;
+  height: 15px;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -39,26 +20,23 @@
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #00001a; }
-  @media all and (min-width: 768px) {
-    .hamburger {
-      display: none; } }
+    background-color: #979797; }
 
 .hamburger-box {
-  width: 40px;
-  height: 17px;
+  width: 20px;
+  height: 14px;
   display: inline-block;
   position: relative; }
 
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -1.5px; }
+  margin-top: -1px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 3px;
-    background-color: #00001a;
-    border-radius: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
@@ -67,9 +45,9 @@
     content: '';
     display: block; }
   .hamburger-inner::before {
-    top: -7px; }
+    top: -6px; }
   .hamburger-inner::after {
-    bottom: -7px; }
+    bottom: -6px; }
 
 /*
    * Spin
@@ -78,7 +56,7 @@
   transition-duration: 0.22s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
@@ -89,75 +67,79 @@
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-html.is-active {
-  overflow: hidden; }
-  html.is-active .overlay {
-    opacity: 1;
-    z-index: 1; }
-
 body {
-  font-family: "Inter-Regular";
-  background-color: #fffdfa; }
+  font-family: "League Spartan", sans-serif; }
+  body.is-active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2; }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: -1; }
+.header a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.2s; }
 
-.header-nav {
-  background-color: #fffdfa; }
-  .header-nav a {
-    color: #00001a; }
-    .header-nav a:hover {
-      color: #f15d51; }
-    @media all and (min-width: 768px) {
-      .header-nav a {
-        color: #5e607a; } }
-  .header-nav.is-active {
-    right: 0; }
+.header a:hover::after {
+  width: 16px; }
 
-.button {
-  background-color: #f15d51;
-  color: #fffdfa; }
-  .button:hover {
-    background-color: #00001a; }
+.header.is-active {
+  background-color: #fff; }
+  .header.is-active .header-logo {
+    display: none; }
+  .header.is-active .navigation {
+    display: block; }
 
-.featured h1 {
-  font-family: "Inter-Extra-Bold";
-  color: #00001a; }
+@media all and (min-width: 768px) {
+  .header {
+    right: initial;
+    height: initial; } }
 
-.featured p {
-  color: #5e607a; }
+.bg-image {
+  background: 50% / cover; }
 
-.sidebar {
-  background-color: #00001a; }
-  .sidebar h2 {
-    font-family: "Inter-Bold";
-    color: #e9aa52; }
-  .sidebar-item {
-    border-color: #5e607a; }
-    .sidebar-item a {
-      font-family: "Inter-Extra-Bold";
-      color: #fffdfa; }
-      .sidebar-item a:hover {
-        color: #e9aa52; }
-    .sidebar-item p {
-      color: #c5c6ce; }
+.swiper {
+  opacity: 0; }
+  .swiper-initialized {
+    opacity: 1; }
 
-.item h4 {
-  font-family: "Inter-Bold";
-  color: #c5c6ce; }
+.home p {
+  color: #a0a0a0; }
 
-.item a {
-  font-family: "Inter-Extra-Bold";
-  color: #00001a; }
-  .item a:hover {
-    color: #f15d51; }
+@media all and (min-width: 1280px) {
+  .home-hero .col-left {
+    width: calc(100% - 600px); } }
 
-.item p {
-  color: #5e607a; }
+.home-hero .button-action::after {
+  content: '';
+  display: block;
+  margin: 0 0 0 30px;
+  width: 40px;
+  height: 12px;
+  background-image: url("/assets/icons/icon-arrow-black.svg");
+  transition: all 0.2s; }
+
+.home-hero .button-action:hover {
+  color: #a0a0a0; }
+  .home-hero .button-action:hover::after {
+    margin: 0 0 0 40px;
+    background-image: url("/assets/icons/icon-arrow-grey.svg"); }
+
+.home-hero .swiper-buttons .button:hover {
+  background-color: #444; }
