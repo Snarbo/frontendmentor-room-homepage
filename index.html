@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Homepage</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.png" />
+
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/src/css/dist/site.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="/src/js/dist/concat.min.js" defer></script>
+  </head>
+  <body class="home relative min-h-screen xl:flex xl:items-center">
+    <div class="container">
+      <section class="home-hero relative">
+        <header class="header flex justify-center items-center absolute top-0 right-0 left-0 py-12 px-6 h-[110px] transition z-10 md:top-16 md:left-8 md:justify-normal md:p-0 xl:left-[70px]">
+          <button class="hamburger hamburger--spin absolute left-[24px] md:!hidden" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <a class="header-logo" href="/"><img src="/assets/logos/logo.svg" alt="Room" /></a>
+          <nav class="navigation hidden ml-auto md:block md:ml-14">
+            <ul class="flex">
+              <li class="leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">home</a></li>
+              <li class="ml-[30px] leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">shop</a></li>
+              <li class="ml-[30px] leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">about</a></li>
+              <li class="ml-[30px] leading-none"><a class="relative text-base font-semibold text-black leading-none tracking-[-0.665px] md:pb-2 md:text-white" href="#">contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="row md:flex">
+          <div class="col col-left relative md:w-1/2">
+            <div class="swiper h-full transition">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide bg-cover bg-center md:bg-[url('/assets/images/desktop-image-hero-1.jpg')]">
+                  <img class="mobile md:hidden w-full" src="/assets/images/mobile-image-hero-1.jpg" alt="Image 1" />
+                </div>
+                <div class="swiper-slide bg-cover bg-center md:bg-[url('/assets/images/desktop-image-hero-2.jpg')]">
+                  <img class="mobile md:hidden w-full" src="/assets/images/mobile-image-hero-2.jpg" alt="Image 2" />
+                </div>
+                <div class="swiper-slide bg-cover bg-center md:bg-[url('/assets/images/desktop-image-hero-3.jpg')]">
+                  <img class="mobile md:hidden w-full" src="/assets/images/mobile-image-hero-3.jpg" alt="Image 3" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-buttons absolute right-0 bottom-0 flex z-10 xl:hidden">
+              <div class="button button-prev flex justify-center items-center w-14 h-14 bg-black transition">
+                <img class="w-2 h-4" src="/assets/icons/icon-angle-left.svg" alt="Button Prev" />
+              </div>
+              <div class="button button-next flex justify-center items-center w-14 h-14 bg-black transition">
+                <img class="w-2 h-4" src="/assets/icons/icon-angle-right.svg" alt="Button Next" />
+              </div>
+            </div>
+          </div>
+          <div class="col col-right relative md:w-1/2 xl:w-[600px]">
+            <div class="swiper pt-[60px] px-8 pb-[75px] xl:pt-[120px] xl:px-[100px] transition">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <h1 class="text-[40px] font-semibold leading-none tracking-[-1.5px] text-black xl:text-5xl xl:tracking-[-2px]">Discover innovative ways to decorate</h1>
+                  <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+                    We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in
+                    your own style with our collection and make your property a reflection of you and what you love.
+                  </p>
+                  <a class="button button-action flex items-center relative mt-10 md:mt-[26px] text-[15px] font-medium leading-4 tracking-[12.5px] uppercase text-black transition" href="#"
+                    >Shop Now</a
+                  >
+                </div>
+                <div class="swiper-slide">
+                  <h1 class="text-[40px] font-semibold leading-none tracking-[-1.5px] text-black xl:text-5xl xl:tracking-[-2px]">We are available all across the globe</h1>
+                  <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+                    With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch
+                    nearest you using our store locator. Any questions? Don't hesitate to contact us today.
+                  </p>
+                  <a class="button button-action flex items-center relative mt-10 md:mt-[26px] text-[15px] font-medium leading-4 tracking-[12.5px] uppercase text-black transition" href="">Shop Now</a>
+                </div>
+                <div class="swiper-slide">
+                  <h1 class="text-[40px] font-semibold leading-none tracking-[-1.5px] text-black xl:text-5xl xl:tracking-[-2px]">Manufactured with the best materials</h1>
+                  <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+                    Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as
+                    possible. With three decades of experience in this industry, we understand what customers want for their home and office.
+                  </p>
+                  <a class="button button-action flex items-center relative mt-10 md:mt-[26px] text-[15px] font-medium leading-4 tracking-[12.5px] uppercase text-black transition" href="">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-buttons hidden xl:flex">
+              <div class="button button-prev flex justify-center items-center w-20 h-20 bg-black transition">
+                <img class="w-3 h-6" src="/assets/icons/icon-angle-left.svg" alt="Button Prev" />
+              </div>
+              <div class="button button-next flex justify-center items-center w-20 h-20 bg-black transition">
+                <img class="w-3 h-6" src="/assets/icons/icon-angle-right.svg" alt="Button Next" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="home-about md:hidden xl:flex">
+        <div class="col col-left col-image xl:w-[420px]">
+          <img class="w-full" src="/assets/images/image-about-dark.jpg" alt="About" />
+        </div>
+        <div class="col col-middle col-content pt-[50px] px-8 pb-10 xl:flex-1 xl:pt-[70px] xl:px-12 xl:pb-[58px]">
+          <h3 class="text-sm font-bold leading-[22px] tracking-[6px] text-black uppercase">About our future</h3>
+          <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+            Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires
+            you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
+          </p>
+        </div>
+        <div class="col col-right col-image xl:w-[440px]">
+          <img class="w-full" src="/assets/images/image-about-light.jpg" alt="About" />
+        </div>
+      </section>
+      <section class="home-about home-about-tablet hidden md:block xl:hidden">
+        <div class="col col-middle col-content pt-[50px] px-8 pb-10">
+          <h3 class="text-sm font-bold leading-[22px] tracking-[6px] text-black uppercase">About our future</h3>
+          <p class="mt-[15px] xl:mt-[18px] text-base font-medium leading-[22px] tracking-[-0.333px]">
+            Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires
+            you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
+          </p>
+        </div>
+        <div class="row flex">
+          <div class="col col-left col-image flex-1">
+            <img class="w-full h-full object-cover" src="/assets/images/image-about-dark.jpg" alt="About" />
+          </div>
+          <div class="col col-right col-image flex-1">
+            <img class="w-full h-full object-cover" src="/assets/images/image-about-light.jpg" alt="About" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

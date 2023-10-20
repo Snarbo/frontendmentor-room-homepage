@@ -1,0 +1,36 @@
+.header {
+  a {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0px;
+      height: 2px;
+      background-color: $color-white;
+      transition: all 0.2s;
+    }
+
+    &:hover::after {
+      width: 16px;
+    }
+  }
+
+  &.is-active {
+    background-color: $color-white;
+
+    .header-logo {
+      display: none;
+    }
+
+    .navigation {
+      display: block;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    right: initial;
+    height: initial;
+  }
+}
