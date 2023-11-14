@@ -14,9 +14,12 @@ const defaultCarouselOptions = {
   },
 };
 
-const carouselImage = new Swiper('.home-hero .col-left .swiper', defaultCarouselOptions);
+const carouselImage = new Swiper('.home-hero .col-left .swiper', {
+  ...defaultCarouselOptions,
+});
 
-const customCarouselContentOptions = {
+const carouselContent = new Swiper('.home-hero .col-right .swiper', {
+  ...defaultCarouselOptions,
   autoHeight: true,
   navigation: {
     nextEl: '.button-next',
@@ -30,7 +33,4 @@ const customCarouselContentOptions = {
       autoHeight: false,
     },
   },
-};
-
-const carouselContentOptions = { ...defaultCarouselOptions, ...customCarouselContentOptions };
-const carouselContent = new Swiper('.home-hero .col-right .swiper', carouselContentOptions);
+});
